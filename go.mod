@@ -1,4 +1,4 @@
-module github.com/dhax/go-base
+module github.com/calibraint/go-rest
 
 require (
 	github.com/BurntSushi/toml v0.3.1 // indirect
@@ -15,7 +15,9 @@ require (
 	github.com/go-ozzo/ozzo-validation v3.5.0+incompatible
 	github.com/go-pg/migrations v6.2.0+incompatible
 	github.com/go-pg/pg v7.1.5+incompatible
+	github.com/go-stack/stack v1.8.0 // indirect
 	github.com/gofrs/uuid v3.2.0+incompatible
+	github.com/golang/snappy v0.0.1 // indirect
 	github.com/gorilla/css v1.0.0 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/jaytaylor/html2text v0.0.0-20180606194806-57d518f124b0
@@ -34,6 +36,9 @@ require (
 	github.com/stretchr/testify v1.3.0 // indirect
 	github.com/vanng822/css v0.0.0-20180216061826-c6885fd13293 // indirect
 	github.com/vanng822/go-premailer v0.0.0-20180515185223-e3d36948cdc3
+	github.com/xdg/scram v0.0.0-20180814205039-7eeb5667e42c // indirect
+	github.com/xdg/stringprep v1.0.0 // indirect
+	go.mongodb.org/mongo-driver v1.0.0-rc2 // indirect
 	golang.org/x/crypto v0.0.0-20190103213133-ff983b9c42bc // indirect
 	golang.org/x/net v0.0.0-20181011144130-49bb7cea24b1 // indirect
 	golang.org/x/sys v0.0.0-20190109145017-48ac38b7c8cb // indirect

@@ -8,8 +8,8 @@ import (
 	"github.com/go-pg/pg"
 	"github.com/sirupsen/logrus"
 
-	"github.com/dhax/go-base/database"
-	"github.com/dhax/go-base/logging"
+	"github.com/calibraint/go-rest/database"
+	"github.com/calibraint/go-rest/logging"
 )
 
 type ctxKey int

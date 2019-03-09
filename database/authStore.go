@@ -3,8 +3,8 @@ package database
 import (
 	"time"
 
-	"github.com/dhax/go-base/auth/jwt"
-	"github.com/dhax/go-base/auth/pwdless"
+	"github.com/calibraint/go-rest/auth/jwt"
+	"github.com/calibraint/go-rest/auth/pwdless"
 	"github.com/go-pg/pg"
 )
 

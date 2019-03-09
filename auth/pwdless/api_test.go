@@ -18,9 +18,9 @@ import (
 	"github.com/go-chi/chi"
 	"github.com/spf13/viper"
 
-	"github.com/dhax/go-base/auth/jwt"
-	"github.com/dhax/go-base/email"
-	"github.com/dhax/go-base/logging"
+	"github.com/calibraint/go-rest/auth/jwt"
+	"github.com/calibraint/go-rest/email"
+	"github.com/calibraint/go-rest/logging"
 )
 
 var (

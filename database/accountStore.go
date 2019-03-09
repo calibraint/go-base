@@ -1,9 +1,9 @@
 package database
 
 import (
-	"github.com/dhax/go-base/auth/jwt"
-	"github.com/dhax/go-base/auth/pwdless"
-	"github.com/dhax/go-base/models"
+	"github.com/calibraint/go-rest/auth/jwt"
+	"github.com/calibraint/go-rest/auth/pwdless"
+	"github.com/calibraint/go-rest/models"
 	"github.com/go-pg/pg"
 )
 

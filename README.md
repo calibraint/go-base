@@ -41,7 +41,7 @@ Besides /auth/* the API provides to main routes /api/* and /admin/* to distingui
 Check [routes.md](routes.md) file for an overview of the provided API routes.
 
 #### Demo client application
-For demonstration of the login and account management features this API also serves a [Vue.js](https://vuejs.org) Progressive Web App (PWA). The client's source code can be found [here](https://github.com/dhax/go-base-vue).
+For demonstration of the login and account management features this API also serves a [Vue.js](https://vuejs.org) Progressive Web App (PWA). The client's source code can be found [here](https://github.com/calibraint/go-rest-vue).
 
 If no valid email smtp settings are provided by environment variables, emails will be print to stdout showing the login token. Use one of the following bootstrapped users for login:
 - admin@boot.io (has access to admin panel)
@@ -74,7 +74,7 @@ EMAIL_FROM_NAME | string || from name used in sending emails
 
 Any feedback and pull requests are welcome and highly appreciated. Please open an issue first if you intend to send in a larger pull request or want to add additional features.
 
-[GoDoc]: https://godoc.org/github.com/dhax/go-base
-[GoDoc Badge]: https://godoc.org/github.com/dhax/go-base?status.svg
-[GoReportCard]: https://goreportcard.com/report/github.com/dhax/go-base
-[GoReportCard Badge]: https://goreportcard.com/badge/github.com/dhax/go-base
+[GoDoc]: https://godoc.org/github.com/calibraint/go-rest
+[GoDoc Badge]: https://godoc.org/github.com/calibraint/go-rest?status.svg
+[GoReportCard]: https://goreportcard.com/report/github.com/calibraint/go-rest
+[GoReportCard Badge]: https://goreportcard.com/badge/github.com/calibraint/go-rest

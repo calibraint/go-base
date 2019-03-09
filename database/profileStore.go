@@ -1,7 +1,7 @@
 package database
 
 import (
-	"github.com/dhax/go-base/models"
+	"github.com/calibraint/go-rest/models"
 	"github.com/go-pg/pg"
 )
 
