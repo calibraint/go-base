@@ -38,7 +38,7 @@ require (
 	github.com/vanng822/go-premailer v0.0.0-20180515185223-e3d36948cdc3
 	github.com/xdg/scram v0.0.0-20180814205039-7eeb5667e42c // indirect
 	github.com/xdg/stringprep v1.0.0 // indirect
-	go.mongodb.org/mongo-driver v1.0.0-rc2 // indirect
+	go.mongodb.org/mongo-driver v1.0.0-rc2
 	golang.org/x/crypto v0.0.0-20190103213133-ff983b9c42bc // indirect
 	golang.org/x/net v0.0.0-20181011144130-49bb7cea24b1 // indirect
 	golang.org/x/sys v0.0.0-20190109145017-48ac38b7c8cb // indirect

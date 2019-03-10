@@ -8,12 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/calibraint/go-rest/api/admin"
 	"github.com/calibraint/go-rest/api/app"
-	"github.com/calibraint/go-rest/auth/jwt"
-	"github.com/calibraint/go-rest/auth/pwdless"
 	"github.com/calibraint/go-rest/database"
-	"github.com/calibraint/go-rest/email"
 	"github.com/calibraint/go-rest/logging"
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
@@ -28,25 +24,6 @@ func New() (*chi.Mux, error) {
 	db, err := database.DBConn()
 	if err != nil {
 		logger.WithField("module", "database").Error(err)
-		return nil, err
-	}
-
-	mailer, err := email.NewMailer()
-	if err != nil {
-		logger.WithField("module", "email").Error(err)
-		return nil, err
-	}
-
-	authStore := database.NewAuthStore(db)
-	authResource, err := pwdless.NewResource(authStore, mailer)
-	if err != nil {
-		logger.WithField("module", "auth").Error(err)
-		return nil, err
-	}
-
-	adminAPI, err := admin.NewAPI(db)
-	if err != nil {
-		logger.WithField("module", "admin").Error(err)
 		return nil, err
 	}
 
@@ -69,11 +46,7 @@ func New() (*chi.Mux, error) {
 	// use CORS middleware if client is not served by this api, e.g. from other domain or CDN
 	// r.Use(corsConfig().Handler)
 
-	r.Mount("/auth", authResource.Router())
 	r.Group(func(r chi.Router) {
-		r.Use(authResource.TokenAuth.Verifier())
-		r.Use(jwt.Authenticator)
-		r.Mount("/admin", adminAPI.Router())
 		r.Mount("/api", appAPI.Router())
 	})
 

@@ -2,10 +2,10 @@
 package app
 
 import (
+	"go.mongodb.org/mongo-driver/mongo"
 	"net/http"
 
 	"github.com/go-chi/chi"
-	"github.com/go-pg/pg"
 	"github.com/sirupsen/logrus"
 
 	"github.com/calibraint/go-rest/database"
@@ -15,27 +15,21 @@ import (
 type ctxKey int
 
 const (
-	ctxAccount ctxKey = iota
-	ctxProfile
+	ctxUser ctxKey = iota
 )
 
 // API provides application resources and handlers.
 type API struct {
-	Account *AccountResource
-	Profile *ProfileResource
+	User *UserResource
 }
 
 // NewAPI configures and returns application API.
-func NewAPI(db *pg.DB) (*API, error) {
-	accountStore := database.NewAccountStore(db)
-	account := NewAccountResource(accountStore)
-
-	profileStore := database.NewProfileStore(db)
-	profile := NewProfileResource(profileStore)
+func NewAPI(db *mongo.Database) (*API, error) {
+	userStore := database.NewUserStore(db)
+	user := NewUserResource(userStore)
 
 	api := &API{
-		Account: account,
-		Profile: profile,
+		User: user,
 	}
 	return api, nil
 }
@@ -44,8 +38,7 @@ func NewAPI(db *pg.DB) (*API, error) {
 func (a *API) Router() *chi.Mux {
 	r := chi.NewRouter()
 
-	r.Mount("/account", a.Account.router())
-	r.Mount("/profile", a.Profile.router())
+	r.Mount("/user", a.User.router())
 
 	return r
 }
